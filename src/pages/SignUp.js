@@ -3,6 +3,7 @@ import {APIContext} from '../store'
 
 export function SignUp(){
 
+    /** @type {FirebaseAPI} - Firebase API Instance*/
     const API = useContext(APIContext)
 
     return (

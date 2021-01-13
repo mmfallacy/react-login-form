@@ -2,6 +2,8 @@ import {useContext} from 'react'
 import {APIContext} from '../store'
 
 export function Login(){
+    
+    /** @type {FirebaseAPI} - Firebase API Instance*/
     const API = useContext(APIContext)
 
     return (
