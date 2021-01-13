@@ -14,6 +14,9 @@ export function Login(){
             <input name="pass" />
             <br/>
             <button>Submit</button>
+            <br/>
+            <br/>
+            <span>{API.instanceUID}</span>
         </form>
     )
 }

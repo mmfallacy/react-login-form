@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import {Login, SignUp} from './pages'
 import {APIProvider} from './store'
 import {FirebaseAPI} from './utils'
@@ -15,6 +15,8 @@ function App() {
         <Route exact path="/" component={MockHome}/>
         <Route exact path="/login" component={Login}/>
         <Route exact path="/signup" component={SignUp}/>
+
+        <MockNav />
       </Router>
     </APIProvider>
 
@@ -23,5 +25,11 @@ function App() {
 
 const MockHome = () => <div>Home</div>
 
+const MockNav = () => 
+    <nav>
+      <Link to="/">Home</Link> <br/>
+      <Link to="/login">Login</Link> <br/>
+      <Link to="/signup">SignUp</Link> <br/>
+    </nav>
 
 export default App;

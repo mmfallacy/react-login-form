@@ -1,7 +1,9 @@
-
+import {useContext} from 'react'
+import {APIContext} from '../store'
 
 export function SignUp(){
 
+    const API = useContext(APIContext)
 
     return (
         <form>
@@ -13,6 +15,9 @@ export function SignUp(){
             <input name="pass" />
             <br/>
             <button>Signup</button>
+            <br/>
+            <br/>
+            <span>{API.instanceUID}</span>
         </form>
     )
 }
