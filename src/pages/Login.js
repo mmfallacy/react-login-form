@@ -1,7 +1,8 @@
-
+import {useContext} from 'react'
+import {APIContext} from '../store'
 
 export function Login(){
-
+    const API = useContext(APIContext)
 
     return (
         <form>

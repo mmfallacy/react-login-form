@@ -1,10 +1,11 @@
 import firebase from 'firebase/app';
 import 'firebase/auth'
 
-export class API {
+export class FirebaseAPI {
     constructor(config){
         this._app = firebase.initializeApp(config)
         this._user = null
+        this._instanceuid = Math.random()
     }
 
     onAuthStateChange(fn) {
@@ -17,6 +18,10 @@ export class API {
 
     async signUp(email, password){
         return await this._app.auth().createUserWithEmailAndPassword(email,password)
+    }
+
+    get instanceUID(){
+        return this._instanceuid
     }
 
 }
