@@ -15,7 +15,7 @@ export const AuthProvider = ({children}) => {
 
     const API = useContext(APIContext)
 
-    const [user, setUser] = useState(null)
+    const [_user, setUser] = useState(null)
 
     /**
      * Set context value to user auth state on mount
@@ -25,7 +25,7 @@ export const AuthProvider = ({children}) => {
     },[API])
 
     return (
-        <AuthContext.Provider value={user}>
+        <AuthContext.Provider value={_user}>
             {children}
         </AuthContext.Provider>
     )

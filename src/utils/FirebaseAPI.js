@@ -15,6 +15,8 @@ export class FirebaseAPI {
         /** @type {firebase.app.App} */
         this._app = firebase.initializeApp(config)
 
+        this._app.auth().setPersistence(firebase.auth.Auth.Persistence.NONE)
+
         /** @type {User|null} */        
         this._user = null
     }
